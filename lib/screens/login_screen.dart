@@ -80,6 +80,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   InkWell(
                     onTap: () {
                       showModalBottomSheet(
+                        isScrollControlled: true,
                           context: context,
                           builder: (context) {
                             return LoginBottomSheet();
