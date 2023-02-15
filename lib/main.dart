@@ -6,5 +6,7 @@ void main() {
   MaterialApp(
     theme: ThemeData(primarySwatch: Colors.green),
     debugShowCheckedModeBanner: false,
-  home:LoginScreen()));
+  home:LoginScreen(),
+  )
+  );
 }
