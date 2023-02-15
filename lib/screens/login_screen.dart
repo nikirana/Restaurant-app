@@ -3,14 +3,9 @@ import "package:flutter_svg/flutter_svg.dart";
 import '/bottom_sheets/login_bottom_sheet.dart';
 import '/main.dart';
 
-class LoginScreen extends StatefulWidget {
+class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
 
-  @override
-  State<LoginScreen> createState() => _LoginScreenState();
-}
-
-class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
