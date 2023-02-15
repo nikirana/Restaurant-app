@@ -1,6 +1,7 @@
 import "package:flutter/material.dart";
 import "package:font_awesome_flutter/font_awesome_flutter.dart";
 import "package:foodei/main.dart";
+import "package:foodei/screens/forget_password_screen.dart";
 import "package:foodei/utils/text_form_field.dart";
 
 class LoginBottomSheet extends StatefulWidget {
@@ -117,9 +118,14 @@ class _LoginBottomSheetState extends State<LoginBottomSheet> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
-                          Text(
-                            "Forgot Password?",
-                            style: TextStyle(color: Colors.green),
+                          GestureDetector(
+                            onTap: (){
+                              Navigator.push(context,MaterialPageRoute(builder: (context)=>ForgotPasswordScreen()));
+                            },
+                            child: Text(
+                              "Forgot Password?",
+                              style: TextStyle(color: Colors.green),
+                            ),
                           )
                         ],
                       ),

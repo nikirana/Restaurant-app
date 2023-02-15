@@ -2,23 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:foodei/main.dart';
 import 'package:foodei/utils/text_form_field.dart';
 
-class ForgotPasswordScreen extends StatefulWidget {
-  const ForgotPasswordScreen({super.key});
+class ChangePasswordScreen extends StatefulWidget {
+  const ChangePasswordScreen({super.key});
 
   @override
-  State<ForgotPasswordScreen> createState() => _ForgotPasswordScreenState();
+  State<ChangePasswordScreen> createState() => _ChangePasswordScreenState();
 }
 
-class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
+class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
   @override
-  var _emailController = TextEditingController();
-  @override
-  void dispose() {
-    // TODO: implement dispose
-    super.dispose();
-    _emailController.dispose();
-  }
-
+  var _passwordController=TextEditingController();
+  var _passwordConfirmController=TextEditingController();
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     height = size.height;
@@ -31,26 +25,26 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SizedBox(
-                height: height * 0.13,
+                height: height * 0.11,
               ),
               Text(
-                "Forgot Password",
+                "Change New Password",
                 style: TextStyle(
                     fontSize: height * 0.03, fontWeight: FontWeight.w700),
               ),
               SizedBox(height: height * 0.007),
               Text(
-                "Enter your registered email below",
+                "Enter a different password with the previous",
                 style: TextStyle(
-                    fontSize: height * 0.023,
+                    fontSize: height * 0.019,
                     color: Colors.grey,
                     fontWeight: FontWeight.w700),
               ),
               SizedBox(
-                height: height * 0.19,
+                height: height * 0.15,
               ),
               Text(
-                "Email Address",
+                "New Password",
                 style: TextStyle(
                     fontWeight: FontWeight.w700,
                     fontSize: height * 0.02,
@@ -60,25 +54,25 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                 height: height * 0.007,
               ),
               TextFormFieldWidget(
-                  _emailController, false, "Eg parul@foodie.com"),
+                  _passwordConfirmController, true, "New password"),
               SizedBox(
                 height: height * 0.013,
               ),
-              RichText(
-                text: TextSpan(
-                    style: TextStyle(
-                        color: Colors.grey,
-                        fontSize: height * 0.018,
-                        fontWeight: FontWeight.w700),
-                    children: [
-                      TextSpan(text: "Remember Password?"),
-                      TextSpan(
-                          text: "Sign in",
-                          style: TextStyle(color: Colors.green)),
-                    ]),
+              Text(
+                "Confirm Password",
+                style: TextStyle(
+                    fontWeight: FontWeight.w700,
+                    fontSize: height * 0.02,
+                    color: Colors.grey),
               ),
               SizedBox(
-                height: height * 0.22,
+                height: height * 0.007,
+              ),
+              TextFormFieldWidget(
+                  _passwordConfirmController, true, "Confirm password"),
+              
+              SizedBox(
+                height: height * 0.20,
               ),
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: width * 0.07),
@@ -91,7 +85,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                     borderRadius: BorderRadius.circular(height * 0.025),
                   ),
                   child: Text(
-                    "Submit",
+                    "Reset Password",
                     style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.w600,
