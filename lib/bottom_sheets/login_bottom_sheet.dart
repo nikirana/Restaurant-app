@@ -177,7 +177,8 @@ class _LoginBottomSheetState extends State<LoginBottomSheet> {
                       ),
                     ],
                   )
-                : Column(
+                : 
+                Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
