@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:foodei/screens/change_password_screen.dart';
+import 'package:foodei/screens/email_verification_screen.dart';
 import 'package:foodei/screens/forget_password_screen.dart';
 import 'package:foodei/screens/login_screen.dart';
 import 'package:foodei/screens/onboarding_screen.dart';
@@ -16,5 +17,5 @@ void main() async{
       theme: ThemeData(primarySwatch: Colors.green),
       debugShowCheckedModeBanner: false,
       
-      home:const OnboardingScreen()));
+      home:const EmailVerificationScreen()));
 }
