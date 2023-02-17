@@ -78,7 +78,7 @@ class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
                 padding: EdgeInsets.symmetric(horizontal: width * 0.07),
                 child: Container(
                   alignment: Alignment.center,
-                  height: height * 0.05,
+                  height: height * 0.06,
                   width: double.infinity,
                   decoration: BoxDecoration(
                     color: Colors.green,
