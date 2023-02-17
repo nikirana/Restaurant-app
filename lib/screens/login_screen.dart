@@ -9,9 +9,7 @@ class LoginScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
-    height = size.height;
-    width = size.width;
+
     return Scaffold(
       body: SingleChildScrollView(
         child: SafeArea(
