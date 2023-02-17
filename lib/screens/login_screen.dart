@@ -74,13 +74,16 @@ class LoginScreen extends StatelessWidget {
                     style: TextStyle(fontSize: height * 0.016),
                     textAlign: TextAlign.center,
                   )
-                ],
+                )
+                  ],
+                ),
               ),
             ),
-          ),
-        ),
       ),
-    );
+        ));
+  }
+  Widget _gap(double height) {
+    return SizedBox(height: height);
   }
 
 
