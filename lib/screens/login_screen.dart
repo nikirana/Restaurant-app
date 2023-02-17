@@ -20,24 +20,18 @@ class LoginScreen extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 20.0),
               child: Column(
                 children: [
-                  SizedBox(
-                    height: height * 0.12,
-                  ),
+                    _gap(height * 0.12),
                   SvgPicture.asset(
                     "assets/login_page_background.svg",
                     height: height * 0.25,
                   ),
-                  SizedBox(
-                    height: height * 0.08,
-                  ),
+                    _gap(height * 0.08),
                   Text(
                     "Welcome",
                     style: TextStyle(
                         fontSize: height * 0.04, fontWeight: FontWeight.w500),
                   ),
-                  SizedBox(
-                    height: height * 0.025,
-                  ),
+                    _gap(height * 0.025),
                   SizedBox(
                     width: width * 0.8,
                     child: Text(
