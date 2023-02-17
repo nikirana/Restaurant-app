@@ -41,60 +41,24 @@ class LoginScreen extends StatelessWidget {
                       textAlign: TextAlign.center,
                     ),
                   ),
-                  SizedBox(
-                    height: height * 0.1,
-                  ),
-                  Container(
-                    height: height * 0.075,
-                    width: double.infinity,
-                    margin: EdgeInsets.symmetric(horizontal: width * 0.08),
-
-                    //color: Colors.green,
-                    alignment: Alignment.center,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(height * 0.02),
-                        color: const Color.fromARGB(232, 50, 163, 95)),
-                    child: Text(
-                      "Create Account",
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontSize: height * 0.022,
-                          fontWeight: FontWeight.w500),
+                    _gap(height * 0.1),
+                    CustomButton(
+                      buttonText: 'Create Account',
+                      onTap: () => _onButtonClick(context, 0),
                     ),
-                  ),
-                  SizedBox(
-                    height: height * 0.024,
-                  ),
-                  InkWell(
-                    onTap: () {
-                      showModalBottomSheet(
-                        isScrollControlled: true,
-                          context: context,
-                          builder: (context) {
-                            return LoginBottomSheet();
-                          });
-                    },
-                    child: Container(
-                      height: height * 0.075,
-                      alignment: Alignment.center,
-                      margin: EdgeInsets.symmetric(horizontal: width * 0.08),
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15),
-                          color: const Color.fromARGB(232, 167, 252, 201)),
-                      child: Text(
-                        "Login",
-                        style: TextStyle(
-                          color: const Color.fromARGB(232, 50, 163, 95),
-                          fontWeight: FontWeight.w500,
-                          fontSize: height * 0.022,
-                        ),
-                      ),
+                    _gap(height * 0.024),
+                    CustomButton(
+                      buttonText: 'Login',
+                      textColor: const Color.fromARGB(232, 50, 163, 95),
+                      color: const Color.fromARGB(232, 167, 252, 201),
+                      onTap: () => _onButtonClick(context, 1),
                     ),
-                  ),
-                  SizedBox(height: height * 0.025),
-                  Text.rich(
-                    const TextSpan(
-                        text:
+                    _gap(height * 0.025),
+                    Padding(
+                      padding: EdgeInsets.symmetric(horizontal: width * 0.02),
+                      child: Text.rich(
+                        const TextSpan(
+                            text:
                             'By logging in or registering, you have agreed to ',
                         children: [
                           TextSpan(
