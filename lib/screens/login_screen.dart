@@ -82,4 +82,15 @@ class LoginScreen extends StatelessWidget {
       ),
     );
   }
+
+
+  void _onButtonClick(BuildContext context, int index) {
+    showModalBottomSheet(
+        isScrollControlled: true,
+        context: context,
+        backgroundColor: Colors.transparent,
+        builder: (context) {
+          return LoginBottomSheet(index: index);
+        });
+  }
 }
