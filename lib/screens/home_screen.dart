@@ -53,33 +53,39 @@ class HomeScreen extends StatelessWidget {
                   )
                 ],
               ),
-              SizedBox(
-                height: height * 0.02,
-              ),
+             
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: width * 0.08),
                 child: Center(
-                  child: Container(
-                    height: height * 0.04,
-                    alignment: Alignment.center,
-                    decoration: BoxDecoration(
-                      color:Color.fromARGB(255, 217, 215, 215),
-                      borderRadius: BorderRadius.circular(height*0.013),
-                    ),
-                    child: Padding(
-                      padding: EdgeInsets.only(top: 20),
+                  child: Padding(
+                    padding: EdgeInsets.only(top: 20),
+                    child: SizedBox(
+                      height: height*0.05,
                       child: TextField(
+                      
                         decoration: InputDecoration(
+                          contentPadding: EdgeInsets.symmetric(vertical: height*0.01,horizontal: width*0.025),
+                          fillColor: Color.fromARGB(255, 217, 215, 215),
+                          filled: true,
                           hintText: " Search",
+                          enabledBorder: OutlineInputBorder(
+                            borderSide: BorderSide(
+                                width: 0.05,
+                                color: Colors.white),
+                                borderRadius: BorderRadius.circular(height*0.01)
+                          ),
                           border: OutlineInputBorder(
                             borderSide: BorderSide(
                                 width: 0.05,
-                                color: Color.fromARGB(255, 217, 215, 215)),
+                                color: Colors.white,
+                                ),
+                                borderRadius: BorderRadius.circular(height*0.01)
                           ),
                           focusedBorder: OutlineInputBorder(
                             borderSide: BorderSide(
                                 width: 0.05,
-                                color: Color.fromARGB(255, 216, 213, 213)),
+                                color: Colors.white),
+                                borderRadius: BorderRadius.circular(height*0.01)
                           ),
                         ),
                       ),
@@ -88,13 +94,13 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                height: height * 0.04,
-              ),
-              SeeAllOption(
-                  "Today New Arrival", "Best of the today food list update"),
-              SizedBox(
                 height: height * 0.02,
               ),
+              Expanded(
+                child: ListView(children: [
+                SeeAllOption(
+                  "Today New Arrival", "Best of the today food list update"),
+              SizedBox(height: height*0.01,),
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Container(
@@ -122,27 +128,23 @@ class HomeScreen extends StatelessWidget {
               SizedBox(
                 height: height * 0.02,
               ),
-              Container(
-                height: height * 0.3,
-                child: SingleChildScrollView(
-                  scrollDirection: Axis.vertical,
-                  child: Column(children: [
-                    RestaurantCard(),
-                    SizedBox(
-                      height: height * 0.01,
-                    ),
-                    RestaurantCard(),
-                    SizedBox(
-                      height: height * 0.01,
-                    ),
-                    RestaurantCard(),
-                    SizedBox(
-                      height: height * 0.01,
-                    ),
-                    RestaurantCard(),
-                  ]),
-                ),
-              )
+                  RestaurantCard(),
+                  SizedBox(
+                    height: height * 0.01,
+                  ),
+                  RestaurantCard(),
+                  SizedBox(
+                    height: height * 0.01,
+                  ),
+                  RestaurantCard(),
+                  SizedBox(
+                    height: height * 0.01,
+                  ),
+                  RestaurantCard(),
+              
+                ],),
+              ),
+                
             ],
           ),
         ),

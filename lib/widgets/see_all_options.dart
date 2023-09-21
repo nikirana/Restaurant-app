@@ -17,13 +17,14 @@ class SeeAllOption extends StatelessWidget {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(h1,style: TextStyle(fontSize: height*0.025,fontWeight: FontWeight.w700),),
+                      Text(h1,style: TextStyle(fontSize: height*0.022,fontWeight: FontWeight.w700),),
+                      SizedBox(height: height*0.005,),
                       Text(h2,style: TextStyle(color: Colors.grey,fontWeight: FontWeight.w500,fontSize: height*0.015),),
                     ],
                   ),
                   Row(children: [
-                    Text("See All",style: TextStyle(color: Colors.grey,fontSize: height*0.02,fontWeight: FontWeight.w500),),
-                    Icon(FontAwesomeIcons.angleRight,size: height*0.02,color: Colors.grey,),
+                    Text("See All",style: TextStyle(color: Colors.grey,fontSize: height*0.0165,fontWeight: FontWeight.w500),),
+                    Icon(FontAwesomeIcons.angleRight,size: height*0.018,color: Colors.grey,),
                   ],)
                 ]),
               );

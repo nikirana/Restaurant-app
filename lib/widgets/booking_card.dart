@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:foodei/main.dart';
 
-class RestaurantCard extends StatelessWidget {
-  const RestaurantCard({super.key});
+class BookingCard extends StatelessWidget {
+  const BookingCard({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -71,7 +71,7 @@ class RestaurantCard extends StatelessWidget {
                         width: width*0.2,
                         child: ElevatedButton(
                           onPressed: (){},
-                          child: Center(child: Text("Book",style: TextStyle(color: Colors.white),),)),
+                          child: Center(child: Text("Check",style: TextStyle(color: Colors.white),),)),
                       ),
                     ),
                   ],
